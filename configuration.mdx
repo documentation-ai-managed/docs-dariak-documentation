@@ -1,0 +1,126 @@
+---
+title: Configuration
+description: Configure Dariak settings and customize your documentation environment
+---
+
+## Basic Configuration
+
+Configuring Dariak involves setting up your environment to match your documentation needs and workflow preferences. Start with basic settings like team information, branding, and access controls. These foundational configurations ensure your documentation platform aligns with your organization's requirements and standards.
+
+<Columns cols={3}>
+  <Card title="Team Setup" icon="users" href="#team-settings">
+    Configure team members and roles.
+  </Card>
+  <Card title="Branding" icon="palette" href="#branding">
+    Customize colors and logos.
+  </Card>
+  <Card title="Access Control" icon="lock" href="#permissions">
+    Set user permissions and policies.
+  </Card>
+</Columns>
+
+## Team Settings
+
+Set up your team structure in Dariak to facilitate collaboration and content management. Define roles such as administrators, editors, and viewers, each with appropriate permissions. Invite team members via email and assign them to specific projects or documentation spaces.
+
+<Tabs>
+  <Tab title="Roles" icon="user">
+    Define user roles and associated permissions.
+  </Tab>
+  <Tab title="Invitations" icon="mail">
+    Send invitations and manage pending requests.
+  </Tab>
+</Tabs>
+
+<Steps>
+  <Step title="Define Roles" icon="settings">
+    Create custom roles with specific permissions.
+  </Step>
+  <Step title="Invite Members" icon="user-plus">
+    Send email invitations to team members.
+  </Step>
+  <Step title="Assign Projects" icon="folder">
+    Assign users to relevant documentation projects.
+  </Step>
+</Steps>
+
+## Branding and Customization
+
+Customize the appearance of your Dariak documentation to match your brand identity. Upload logos, select color schemes, and configure themes for both light and dark modes. These settings apply across all documentation pages and user interfaces.
+
+<CodeGroup tabs="CSS,JSON">
+  ```css
+  /* Custom CSS for branding */
+  .dariak-header {
+      background-color: #3B82F6;
+      color: white;
+  }
+  ```
+  ```json
+  {
+      "theme": {
+          "primaryColor": "#3B82F6",
+          "logo": "https://example.com/logo.png"
+      }
+  }
+  ```
+</CodeGroup>
+
+<ExpandableGroup>
+  <Expandable title="Color Schemes" default-open="false">
+    Choose from predefined themes or create custom color palettes.
+  </Expandable>
+  <Expandable title="Logo Requirements" default-open="false">
+    Upload logos in SVG or PNG format with transparent backgrounds.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="tip">Test your branding changes across different devices and browsers.</Callout>
+
+## Permissions and Security
+
+Configure access controls to protect sensitive documentation and ensure appropriate user access levels. Set up role-based permissions, content restrictions, and audit logging. These settings help maintain security while enabling efficient collaboration.
+
+<Steps>
+  <Step title="Set Permissions" icon="shield">
+    Define what actions each role can perform.
+  </Step>
+  <Step title="Configure Restrictions" icon="lock">
+    Apply content-level access controls.
+  </Step>
+  <Step title="Enable Auditing" icon="file-text">
+    Turn on logging for security monitoring.
+  </Step>
+</Steps>
+
+## Advanced Settings
+
+For complex deployments, explore advanced configuration options like custom domains, API integrations, and automation workflows. These settings allow you to tailor Dariak to your specific infrastructure and processes.
+
+<Tabs>
+  <Tab title="Domains" icon="globe">
+    Configure custom domains for your documentation.
+  </Tab>
+  <Tab title="Integrations" icon="plug">
+    Connect with external tools and services.
+  </Tab>
+</Tabs>
+
+<Expandable title="Automation Workflows" default-open="false">
+  Set up automated publishing, backups, and notifications to streamline your documentation process.
+</Expandable>
+
+<Callout kind="info">Advanced settings require administrator privileges and may affect system performance.</Callout>
+
+## Troubleshooting Configuration
+
+If configuration changes don't apply as expected, check for syntax errors, verify permissions, and clear caches. Common issues include conflicting settings, permission problems, or browser caching. Use the configuration validation tools to identify and resolve problems.
+
+<ExpandableGroup>
+  <Expandable title="Validation Errors" default-open="false">
+    Check for syntax errors in configuration files.
+  </Expandable>
+  <Expandable title="Permission Issues" default-open="false">
+    Verify your account has the necessary permissions.
+  </Expandable>
+</ExpandableGroup>

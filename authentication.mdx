@@ -1,0 +1,112 @@
+---
+title: Authentication
+description: Learn how to authenticate with the Dariak API
+---
+
+## Authentication Methods
+
+Dariak supports multiple authentication methods to ensure secure access to your documentation resources. Whether you're using API keys, OAuth tokens, or JWT authentication, we provide flexible options that integrate with your existing systems. Each method is designed to balance security with ease of use.
+
+<Columns cols={2}>
+  <Card title="API Keys" icon="key" href="#api-keys">
+    Simple token-based authentication for quick integration.
+  </Card>
+  <Card title="OAuth 2.0" icon="shield" href="#oauth">
+    Industry-standard authorization for enterprise applications.
+  </Card>
+</Columns>
+
+## API Keys
+
+API keys provide a straightforward way to authenticate requests to the Dariak API. Generate keys in your dashboard and include them in your request headers. This method is ideal for server-side applications and automated processes.
+
+<Tabs>
+  <Tab title="Dashboard" icon="settings">
+    Access your API keys from the settings panel in your Dariak dashboard.
+  </Tab>
+  <Tab title="Management" icon="key">
+    Create, rotate, and revoke API keys as needed for security.
+  </Tab>
+</Tabs>
+
+<Steps>
+  <Step title="Generate Key" icon="plus">
+    Log into your Dariak dashboard and navigate to the API keys section.
+  </Step>
+  <Step title="Configure Permissions" icon="settings">
+    Set appropriate permissions for read, write, or admin access.
+  </Step>
+  <Step title="Use in Requests" icon="send">
+    Include the key in your API request headers.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="cURL,Python,JavaScript">
+  ```bash
+  curl -H "Authorization: Bearer YOUR_API_KEY" \
+       -H "Content-Type: application/json" \
+       https://api.dariak.com/documents
+  ```
+  ```python
+  import requests
+  
+  headers = {
+      'Authorization': 'Bearer YOUR_API_KEY',
+      'Content-Type': 'application/json'
+  }
+  
+  response = requests.get('https://api.dariak.com/documents', headers=headers)
+  ```
+  ```javascript
+  const response = await fetch('https://api.dariak.com/documents', {
+      headers: {
+          'Authorization': 'Bearer YOUR_API_KEY',
+          'Content-Type': 'application/json'
+      }
+  });
+  ```
+</CodeGroup>
+
+## OAuth 2.0
+
+For more advanced authentication scenarios, Dariak supports OAuth 2.0 flows. This method allows you to delegate authentication to trusted providers while maintaining control over access permissions. Implement authorization code or client credentials flows based on your application needs.
+
+<ExpandableGroup>
+  <Expandable title="Authorization Code Flow" default-open="false">
+    Use this flow for web applications that need to access user data on behalf of users.
+  </Expandable>
+  <Expandable title="Client Credentials Flow" default-open="false">
+    Use this flow for machine-to-machine authentication in server-side applications.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="tip">Store API keys securely and never expose them in client-side code.</Callout>
+
+## Security Best Practices
+
+Protecting your authentication credentials is crucial for maintaining the security of your Dariak integration. Use environment variables to store sensitive information, implement proper key rotation strategies, and monitor access logs for unusual activity. Regularly review and update your authentication methods to align with current security standards.
+
+<Steps>
+  <Step title="Use Environment Variables" icon="lock">
+    Store credentials in environment variables, not in code.
+  </Step>
+  <Step title="Rotate Keys Regularly" icon="refresh-cw">
+    Update API keys periodically to reduce security risks.
+  </Step>
+  <Step title="Monitor Access" icon="eye">
+    Review authentication logs for suspicious activity.
+  </Step>
+</Steps>
+
+## Troubleshooting Authentication
+
+If you encounter issues with authentication, check your request headers, verify key validity, and ensure proper permissions are set. Common problems include expired tokens, incorrect scopes, or network connectivity issues. Our support team can help resolve complex authentication challenges.
+
+<Expandable title="Common Issues" default-open="false">
+  - Invalid API key format
+  - Expired or revoked credentials
+  - Insufficient permissions
+  - Network timeout errors
+</Expandable>
+
+<Callout kind="info">Contact support if you need help configuring authentication for your specific use case.</Callout>

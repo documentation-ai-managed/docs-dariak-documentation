@@ -1,0 +1,130 @@
+---
+title: Troubleshooting
+description: Solve common issues and resolve problems with Dariak
+---
+
+## Common Issues
+
+When using Dariak, you might encounter various issues that can typically be resolved with simple troubleshooting steps. This guide covers the most frequent problems and provides practical solutions to get you back on track quickly. Start by identifying the type of issue you're experiencing.
+
+<Columns cols={2}>
+  <Card title="Login Problems" icon="lock" href="#login-issues">
+    Resolve authentication and access issues.
+  </Card>
+  <Card title="Performance Issues" icon="zap" href="#performance">
+    Improve loading times and responsiveness.
+  </Card>
+</Columns>
+
+## Login and Authentication Issues
+
+Authentication problems can prevent access to your Dariak account. Check your credentials, browser settings, and network connectivity. If issues persist, try resetting your password or contacting support.
+
+<Tabs>
+  <Tab title="Password Reset" icon="key">
+    Use the forgot password link to reset your credentials.
+  </Tab>
+  <Tab title="Browser Issues" icon="monitor">
+    Clear cache and try different browsers.
+  </Tab>
+</Tabs>
+
+<Steps>
+  <Step title="Verify Credentials" icon="check">
+    Double-check your email and password.
+  </Step>
+  <Step title="Clear Cache" icon="refresh-cw">
+    Clear browser cache and cookies.
+  </Step>
+  <Step title="Check Network" icon="wifi">
+    Ensure stable internet connection.
+  </Step>
+</Steps>
+
+<ExpandableGroup>
+  <Expandable title="Two-Factor Authentication" default-open="false">
+    Troubleshoot 2FA setup and recovery options.
+  </Expandable>
+  <Expandable title="Account Lockouts" default-open="false">
+    Steps to unlock accounts after failed attempts.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="info">Enable two-factor authentication for enhanced account security.</Callout>
+
+## Performance and Loading Issues
+
+Slow loading times or unresponsive interfaces can impact your productivity. Optimize your setup by checking system requirements, clearing caches, and reducing resource usage. Monitor network conditions and consider upgrading your hardware if needed.
+
+<CodeGroup tabs="Browser,Network">
+  ```javascript
+  // Check browser console for errors
+  console.log('Checking for JavaScript errors');
+  ```
+  ```bash
+  # Test network connectivity
+  ping api.dariak.com
+  ```
+</CodeGroup>
+
+<Steps>
+  <Step title="Check System Requirements" icon="cpu">
+    Verify your device meets minimum specifications.
+  </Step>
+  <Step title="Optimize Settings" icon="settings">
+    Adjust performance settings in your account.
+  </Step>
+  <Step title="Monitor Resources" icon="activity">
+    Check CPU, memory, and network usage.
+  </Step>
+</Steps>
+
+## Content and Editing Problems
+
+Issues with content creation, editing, or formatting can disrupt your documentation workflow. Ensure you're using supported formats, check for conflicts, and validate your content. Use the preview mode to catch formatting issues before publishing.
+
+<Tabs>
+  <Tab title="Formatting" icon="type">
+    Fix text formatting and layout issues.
+  </Tab>
+  <Tab title="Media Upload" icon="image">
+    Resolve problems with images and attachments.
+  </Tab>
+</Tabs>
+
+<Expandable title="Version Conflicts" default-open="false">
+  Handle conflicts when multiple users edit the same document simultaneously.
+</Expandable>
+
+<Callout kind="tip">Use the undo feature to revert unwanted changes quickly.</Callout>
+
+## API and Integration Issues
+
+When integrating Dariak with other systems, you might encounter API errors or data synchronization problems. Verify your API keys, check request formats, and review error logs. Test integrations in a development environment before deploying to production.
+
+<Steps>
+  <Step title="Validate API Keys" icon="key">
+    Ensure your API keys are valid and have correct permissions.
+  </Step>
+  <Step title="Check Request Format" icon="file-text">
+    Verify JSON formatting and required fields.
+  </Step>
+  <Step title="Review Logs" icon="file">
+    Examine error logs for detailed information.
+  </Step>
+</Steps>
+
+<ExpandableGroup>
+  <Expandable title="Rate Limiting" default-open="false">
+    Handle API rate limit errors and implement backoff strategies.
+  </Expandable>
+  <Expandable title="Webhook Failures" default-open="false">
+    Debug webhook delivery and response handling issues.
+  </Expandable>
+</ExpandableGroup>
+
+## Getting Help
+
+If you can't resolve an issue using this guide, reach out to our support team. Provide detailed information about your problem, including error messages, steps to reproduce, and your system configuration. Our team will assist you promptly.
+
+<Callout kind="success">Most issues can be resolved with the troubleshooting steps above.</Callout>
